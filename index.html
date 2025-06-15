@@ -93,8 +93,6 @@
       font-weight: bold;
       box-shadow: 0 4px 8px rgba(0,0,0,0.2);
     }
-    @media (max-width: 768px) {
-      nav { flex-direction: column; align-items: flex-start; }
       nav a { margin: 0.5rem 0; }
       .produtos { flex-direction: column; }
       .banner { flex-direction: column; height: auto; }
@@ -107,87 +105,6 @@
   transition: transform 0.3s ease, filter 0.3s ease;
 }
 
-
-/* Menu responsivo melhorado */
-.hamburger {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  margin-left: auto;
-}
-.hamburger div {
-  width: 25px;
-  height: 3px;
-  background-color: white;
-  margin: 4px 0;
-}
-.menu-links {
-  display: flex;
-  gap: 1.5rem;
-}
-.mobile-menu {
-  display: none;
-  flex-direction: column;
-  width: 100%;
-}
-.mobile-menu a {
-  margin: 0.5rem 1rem;
-}
-@media (max-width: 768px) {
-  .menu-links {
-    display: none;
-  }
-  .hamburger {
-    display: flex;
-  }
-  .mobile-menu {
-    display: flex;
-  }
-}
-
-.logo-menu {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  flex-wrap: wrap;
-  max-width: 1200px;
-  margin: auto;
-}
-.logo-area {
-  display: flex;
-  align-items: center;
-  gap: 10px;
-}
-.menu-items {
-  display: flex;
-  gap: 1.5rem;
-}
-.menu-toggle {
-  display: none;
-  flex-direction: column;
-  cursor: pointer;
-  gap: 4px;
-}
-.menu-toggle span {
-  display: block;
-  width: 25px;
-  height: 3px;
-  background: white;
-}
-@media (max-width: 768px) {
-  .menu-toggle {
-    display: flex;
-  }
-  .menu-items {
-    display: none;
-    flex-direction: column;
-    width: 100%;
-    margin-top: 1rem;
-  }
-  body.menu-open .menu-items {
-    display: flex;
-  }
-}
 </style>
 <style>
   .hamburger {
@@ -228,39 +145,22 @@
     menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
   }
 </script>
-<script>
-function toggleMenu() {
-  const menu = document.getElementById('mobileMenu');
-  menu.style.display = menu.style.display === 'flex' ? 'none' : 'flex';
-}
-</script>
 </head>
 <body>
 <header>
 <nav>
-<div class="logo-menu">
-<div class="logo-area">
+<div style="display: flex; align-items: center; gap: 10px;">
 <img alt="Logo" src="Logo.png" style="height: 40px;"/>
 <strong>Solar Company do Brasil</strong>
 </div>
-<div class="menu-toggle" onclick="document.body.classList.toggle('menu-open');">
-<span></span><span></span><span></span>
-</div>
-<div class="menu-items">
+<div>
 <a href="#home">Home</a>
 <a href="#sobre">Sobre</a>
 <a href="#produtos">Produtos</a>
 <a href="#contato">Contato</a>
-</div>
 </div>
 </nav>
-<div class="mobile-menu" id="mobileMenu">
-<a href="#home">Home</a>
-<a href="#sobre">Sobre</a>
-<a href="#produtos">Produtos</a>
-<a href="#contato">Contato</a>
-</div>
-<div class="mobile-menu" id="mobileMenu"><a href="#home">Home</a><a href="#sobre">Sobre</a><a href="#produtos">Produtos</a><a href="#contato">Contato</a></div>
+
 </header> <div class="banner" id="home">
 <h1>Materiais elétricos e energia solar</h1>
 </div> <section id="sobre">
@@ -291,7 +191,7 @@ function toggleMenu() {
 <p><strong>Telefone:</strong> (31) 3592-3190</p>
 <p><strong>Email:</strong> solarcompanydobrasil@gmail.com</p>
 <p><strong>Atendimento:</strong> Seg à Sex 7h às 17:30h | Sáb 7h às 12:30h</p>
-<iframe allowfullscreen="" class="mapa" loading="lazy" referrerpolicy="no-referrer-when-downgrade" src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3774.3085659429024!2d-44.21132512475406!3d-19.974832881428973!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0xa690d8e5e5d5d1%3A0x123456789abcdef!2sAv.%20Amazonas%2C%201521%20-%20Brasileia%2C%20Betim%20-%20MG%2C%2032650-150!5e0!3m2!1spt-BR!2sbr!4v1718400000000!5m2!1spt-BR!2sbr"></iframe>
+<iframe class="mapa" src="https://www.google.com/maps?q=Av.+Amazonas,+1521+-+Brasileia+-+Betim&amp;output=embed"></iframe>
 </section> <a class="whatsapp" href="https://wa.me/553135923190" target="_blank">
     Fale conosco no WhatsApp
   </a>
