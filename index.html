@@ -336,6 +336,38 @@ img.capa {
   margin-left: auto;
   cursor: pointer;
 }
+
+/* Capa com texto sobreposto */
+.capa-container {
+  position: relative;
+}
+.capa-container img {
+  width: 100%;
+  height: auto;
+  display: block;
+}
+.capa-texto {
+  position: absolute;
+  bottom: 20px;
+  width: 100%;
+  text-align: center;
+  color: white;
+  font-size: 1.5rem;
+  font-weight: bold;
+  text-shadow: 2px 2px 5px black;
+}
+
+/* Alinhar ícone do menu à direita */
+.menu-wrapper {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  max-width: 1200px;
+  margin: auto;
+}
+.hamburger-icon {
+  margin-left: auto;
+}
 </style>
 <style>
   .hamburger {
@@ -384,7 +416,6 @@ function toggleMenu() {
 </script>
 </head>
 <body>
-
 <div class="mobile-menu-overlay-right" id="mobileMenu">
 <div class="mobile-menu-content">
 <span class="closebtn" onclick="toggleMobileMenu()">×</span>
@@ -394,7 +425,6 @@ function toggleMenu() {
 <a href="#contato">Contato</a>
 </div>
 </div>
-
 <header>
 <nav>
 <div class="menu-wrapper">
@@ -411,7 +441,7 @@ function toggleMenu() {
 <div class="hamburger-icon" onclick="toggleMobileMenu()">☰</div>
 </div>
 </nav>
-</header><img class="capa" src="Capa.png"/> <div class="banner" id="home">
+</header><div class="capa-container"><img class="capa" src="Capa.png"/><div class="capa-texto">Materiais elétricos e energia solar</div></div> <div class="banner" id="home">
 <h1>Materiais elétricos e energia solar</h1>
 </div> <section id="sobre">
 <h2>Sobre a Empresa</h2>
