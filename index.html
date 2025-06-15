@@ -337,7 +337,6 @@ img.capa {
   cursor: pointer;
 }
 
-/* Capa com texto sobreposto */
 .capa-container {
   position: relative;
 }
@@ -346,27 +345,17 @@ img.capa {
   height: auto;
   display: block;
 }
-.capa-texto {
+.texto-capa {
   position: absolute;
   bottom: 20px;
+  left: 0;
   width: 100%;
-  text-align: center;
+  background-color: rgba(51, 51, 51, 0.6); /* fundo cinza com transparência */
   color: white;
-  font-size: 1.5rem;
+  font-size: 1.6rem;
   font-weight: bold;
-  text-shadow: 2px 2px 5px black;
-}
-
-/* Alinhar ícone do menu à direita */
-.menu-wrapper {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
-  max-width: 1200px;
-  margin: auto;
-}
-.hamburger-icon {
-  margin-left: auto;
+  text-align: center;
+  padding: 15px 10px;
 }
 </style>
 <style>
@@ -441,7 +430,7 @@ function toggleMenu() {
 <div class="hamburger-icon" onclick="toggleMobileMenu()">☰</div>
 </div>
 </nav>
-</header><div class="capa-container"><img class="capa" src="Capa.png"/><div class="capa-texto">Materiais elétricos e energia solar</div></div> <div class="banner" id="home">
+</header><div class="capa-container"><img class="capa" src="Capa.png"/><div class="texto-capa">Materiais elétricos e energia solar</div></div> <div class="banner" id="home">
 <h1>Materiais elétricos e energia solar</h1>
 </div> <section id="sobre">
 <h2>Sobre a Empresa</h2>
